@@ -1,0 +1,92 @@
+.navbarWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 50px;
+  margin: 10px;
+  height: 60px;
+}
+
+.navbarWrapper .logo img {
+  width: 150px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbarWrapper .logo img:hover {
+  cursor: pointer;
+  width: 175px;
+}
+
+.navbarWrapper .loginButton {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbarWrapper .loginButton:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .navbarWrapper {
+    padding: 25px;
+  }
+  .navbarWrapper .logo img {
+    width: 130px;
+  }
+  .navbarWrapper .loginButton {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbarWrapper {
+    padding: 15px;
+  }
+  .navbarWrapper .logo img {
+    width: 100px;
+  }
+  .navbarWrapper .logo img:hover {
+    cursor: pointer;
+    width: 100px;
+  }
+  .navbarWrapper .loginButton {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbarWrapper {
+    padding: 10px;
+  }
+  .navbarWrapper .logo img {
+    width: 100px;
+  }
+  .navbarWrapper .logo img:hover {
+    cursor: pointer;
+    width: 80px;
+  }
+  .navbarWrapper .loginButton {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

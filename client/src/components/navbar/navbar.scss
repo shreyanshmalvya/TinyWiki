@@ -1,0 +1,88 @@
+
+.navbarWrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 50px;
+    margin: 10px;
+    height: 60px;
+    .logo{
+        img{
+            width: 150px;
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                cursor: pointer;
+                width: 175px;
+            }
+        }
+    }
+    .loginButton{
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .navbarWrapper{
+        padding: 25px;
+        .logo{
+            img{
+                width: 130px;
+            }
+        }
+        .loginButton{
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .navbarWrapper{
+        padding: 15px;
+        .logo{
+            img{
+                width: 100px;
+                &:hover{
+                    cursor: pointer;
+                    width: 100px;
+                }
+            }
+            
+        }
+        .loginButton{
+            font-size: 12px;
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .navbarWrapper{
+        padding: 10px;
+        .logo{
+            img{
+                width: 100px;
+                &:hover{
+                    cursor: pointer;
+                    width: 80px;
+                }
+            }
+        }
+        .loginButton{
+            font-size: 12px;
+        }
+    }
+}
+    
+    
+    
