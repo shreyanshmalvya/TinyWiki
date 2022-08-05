@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const titleSlice = createSlice({
-  name: 'title',
+  name: 'titles',
   initialState: {
-    value: '',
+    title: '',
   },
   reducers: {
     incrementByAmount: (state, action) => {
-      state.value = action.payload;
+      state.title = action.payload;
     },
   },
 })

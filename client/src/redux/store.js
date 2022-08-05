@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import titleReducer from './titleSlice'
+import titleReducer from './title'
 
 export default configureStore({
   reducer: {

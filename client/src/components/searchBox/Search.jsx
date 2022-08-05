@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import {incrementByAmount} from '../../redux/titleSlice'
+import { useDispatch } from 'react-redux'
+import {Link} from 'react-router-dom'
+import { incrementByAmount } from '../../redux/title'
 import axios from 'axios';
 import './search.css'
 
@@ -9,15 +10,13 @@ const Search = () => {
     //declaring states
     const [search, setSearch] = React.useState('');
     const [searchResults, setSearchResults] = React.useState([]);
-    
+
     //intializing redux state
-    const title = useSelector((state) => state.title.value);
     const dispatch = useDispatch()
     //fuction to pass title into store
-    const getTitle = (reqTitle) =>{
-        console.log('running')
-        dispatch(incrementByAmount(title, reqTitle));
-        console.log(title);
+    const getTitle = (reqTitle) => {
+        console.log(reqTitle)
+        dispatch(incrementByAmount(reqTitle));
     }
 
     //using useEffect to fetch data from the api
@@ -26,8 +25,9 @@ const Search = () => {
         if (search) {
             const result = async () => {
                 const response = await axios.get(`http://localhost:5000/search/${search}`);
-                setSearchResults(response.data.pages);
-                console.log(response.data.pages);
+                const result = await response.data.pages;
+                setSearchResults(result);
+                console.log(result);
             }
             result();
         }
@@ -46,19 +46,19 @@ const Search = () => {
                 </div>
             </div >
             <div className="searchResults">
-                {searchResults.map((result,key) => {
+                {searchResults.map((result, key) => {
                     return (
                         //return data in leaflet from
                         <div className="resultWrapper">
-                            <div className="searchResult" key={result.id}>
+                            <div className="searchResult" key={key}>
                                 <div className="searchResultTitle">
-                                   {result.title}
+                                    {result.title}
                                 </div>
                                 <div className="searchResultDescription">
                                     {result.description}
                                 </div>
-                                <div className="readOption" onClick={getTitle(result.title)}> 
-                                    Read 
+                                <div className="readOption" onClick={() => {getTitle(result.title)}}>
+                                    <Link to= '/read'>Read</Link>
                                 </div>
                             </div>
                         </div>
