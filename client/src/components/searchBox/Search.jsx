@@ -8,8 +8,14 @@ import './search.css'
 
 const Search = () => {
     //declaring states
+    const [query, setQuery] = React.useState('')
     const [search, setSearch] = React.useState('');
     const [searchResults, setSearchResults] = React.useState([]);
+
+    //storing the value of the search input in the state
+    const searchHandler =()=>{
+        setSearch(query);
+    };
 
     //intializing redux state
     const dispatch = useDispatch()
@@ -38,10 +44,10 @@ const Search = () => {
             <div className="searchWrapper">
                 <div className="search">
                     <div className="searchInput">
-                        <input id='searchTerm' type="text" placeholder="Search anything" onChange={(val) => setSearch(val.target.value)} />
+                        <input id='searchTerm' type="text" placeholder="Search anything" onChange={(val) => setQuery(val.target.value)} />
                     </div>
                     <div className="searchIcon">
-                        <div className='searchButton' id='searchIcon' type="submit">Search</div>
+                        <div className='searchButton' id='searchIcon' type="submit" onClick={()=> searchHandler()}>Search</div>
                     </div>
                 </div>
             </div >

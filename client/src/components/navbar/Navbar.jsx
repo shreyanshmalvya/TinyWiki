@@ -12,9 +12,11 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </Link>
       </div>
-      <div className="loginButton">
-        <span className='Login'>Login</span>
-      </div>
+      <Link to='/login'>
+        <div className="loginButton">
+          <span className='Login'>Login</span>
+        </div>
+      </Link>
     </div>
   )
 }

@@ -37,6 +37,7 @@
   padding: 5px 10px;
   font-size: 16px;
   font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -45,6 +46,10 @@
 .navbarWrapper .loginButton:hover {
   background-color: #000;
   color: #fff;
+}
+
+.navbarWrapper .loginButton a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

@@ -227,12 +227,17 @@
   font-family: 'Roboto', sans-serif;
   color: #000;
   border: none;
+  text-decoration: none;
   outline: none;
   padding: 0.5rem;
 }
 
 .searchResults .resultWrapper .searchResult .readOption:hover {
   cursor: pointer;
+}
+
+.searchResults .resultWrapper .searchResult .readOption a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {

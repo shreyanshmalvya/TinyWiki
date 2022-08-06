@@ -128,10 +128,14 @@
                 font-family: 'Roboto', sans-serif;
                 color: #000;
                 border: none;
+                text-decoration: none;
                 outline: none;
                 padding: 0.5rem;
                 &:hover{
                     cursor: pointer;
+                }
+                a{
+                    text-decoration: none;
                 }
             }
         }
