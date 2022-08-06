@@ -77,7 +77,7 @@ router.post("/login", (req, res, next) => {
                         token: token
                     });
                 }
-                res.status(401).json({
+                res.status(200).json({
                     message: "Auth failed"
                 });
             });

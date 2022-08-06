@@ -55,12 +55,12 @@ const Search = () => {
                 {searchResults.map((result, key) => {
                     return (
                         //return data in leaflet from
-                        <div className="resultWrapper">
-                            <div className="searchResult" key={key}>
+                        <div className="resultWrapper" key={key}>
+                            <div className="searchResult" >
                                 <div className="searchResultTitle">
                                     {result.title}
                                 </div>
-                                <div className="searchResultDescription">
+                                <div className="searchResultDescription" >
                                     {result.description}
                                 </div>
                                 <div className="readOption" onClick={() => {getTitle(result.title)}}>

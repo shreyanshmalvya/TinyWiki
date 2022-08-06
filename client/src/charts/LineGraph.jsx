@@ -12,11 +12,15 @@ const LineGraph = () => {
   const [showGraph, setShowGraph] = React.useState(false);
   const [label, setlabel] = React.useState([]);
   const [data, setdata] = React.useState([]);
-
-
+  //fetching token from local storage
+  const token = localStorage.getItem('token')
   //functions to assign data
   const searchDataFetch = async () => {
-    const response = await axios.get('http://localhost:5000/data/search');
+    const response = await axios.get('http://localhost:5000/data/search', {
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+    });
     const result = await response;
     console.log(result);
     setdata(result.data.count);
@@ -25,7 +29,11 @@ const LineGraph = () => {
   }
 
   const readDataFetch = async () => {
-    const response = await axios.get('http://localhost:5000/data/read');
+    const response = await axios.get('http://localhost:5000/data/read', {
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+    });
     const result = await response;
     console.log(result);
     setdata(result.data.count);
@@ -35,6 +43,9 @@ const LineGraph = () => {
 
   return (
     <div className='graphWrapper'>
+      <div className="welcomeMessage">
+        Welcome Admin
+      </div>
       {
         showGraph ?
           <div>

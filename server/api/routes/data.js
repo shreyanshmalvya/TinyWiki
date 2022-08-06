@@ -5,7 +5,7 @@ const checkAuth = require('../middleware/check-auth');
 const SearchData = require('../model/searchData');
 const ReadData = require('../model/readData')
 
-router.get('/search', (req, res, next) => {
+router.get('/search', checkAuth , (req, res, next) => {
     //get all the data from mongoose
     SearchData.find().exec()
         .then(result => {
@@ -28,7 +28,7 @@ router.get('/search', (req, res, next) => {
         })
 });
 
-router.get('/read', (req, res, next) => {
+router.get('/read', checkAuth, (req, res, next) => {
     ReadData.find().exec()
         .then(result => {
             //declare an array

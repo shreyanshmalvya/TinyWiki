@@ -19,6 +19,11 @@
   margin: 30px 30px;
 }
 
+.graphWrapper .welcomeMessage {
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .graphWrapper .buttonWrapper {
   display: -webkit-box;
   display: -ms-flexbox;

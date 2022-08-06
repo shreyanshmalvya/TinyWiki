@@ -21,7 +21,6 @@ const Read = () => {
                 const response = await axios.get(`http://localhost:5000/read/${title}`);
                 const data = await response.data.html;
                 setResponse(data);
-                console.log(data);
             }
             result();
         }
@@ -33,9 +32,11 @@ const Read = () => {
                 <h1>{title}</h1>
             </div>
             <div className="response">
+                <>
                 {
                     response ? parser(response) : <div>Loading...</div>
                 }
+                </>
             </div>
         </div>
     );

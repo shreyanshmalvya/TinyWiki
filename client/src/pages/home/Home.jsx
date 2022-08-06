@@ -3,7 +3,6 @@ import './home.css'
 import logo from '../../images/logo.svg'
 import Navbar from '../../components/navbar/Navbar'
 import Search from '../../components/searchBox/Search'
-import LineGraph from '../../charts/LineGraph'
 
 export const Home = () => {
     return (
@@ -19,7 +18,6 @@ export const Home = () => {
                 <div className="creator">
                     <p>Created by Shreyansh Malviya</p>
                 </div>
-                <LineGraph />
             </div>
         </div>
     )
