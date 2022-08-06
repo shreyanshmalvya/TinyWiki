@@ -21,7 +21,6 @@ const Search = () => {
     const dispatch = useDispatch()
     //fuction to pass title into store
     const getTitle = (reqTitle) => {
-        console.log(reqTitle)
         dispatch(incrementByAmount(reqTitle));
     }
 
@@ -33,7 +32,6 @@ const Search = () => {
                 const response = await axios.get(`http://localhost:5000/search/${search}`);
                 const result = await response.data.pages;
                 setSearchResults(result);
-                console.log(result);
             }
             result();
         }

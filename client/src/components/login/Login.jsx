@@ -15,7 +15,6 @@ const Login = () => {
             email, password
         })
         const { data } = check;
-        console.log(data);
         if (data.message !== 'Auth failed') {
             //store token
             localStorage.setItem('token', data.token);

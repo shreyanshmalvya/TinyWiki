@@ -8,7 +8,6 @@ const Admin = () => {
     const [loggedIn, setLoggedIn] = React.useState(false)
     useEffect(() => {
         let token = localStorage.getItem('token')
-        console.log(token)
         if (token !== null) {
             setLoggedIn(true)
         }

@@ -22,7 +22,6 @@ const LineGraph = () => {
       },
     });
     const result = await response;
-    console.log(result);
     setdata(result.data.count);
     setlabel(result.data.labels);
     setShowGraph(true);
@@ -35,7 +34,6 @@ const LineGraph = () => {
       },
     });
     const result = await response;
-    console.log(result);
     setdata(result.data.count);
     setlabel(result.data.labels);
     setShowGraph(true);
@@ -49,7 +47,6 @@ const LineGraph = () => {
       {
         showGraph ?
           <div>
-            {console.log(label)}
             <Doughnut data={{
               labels: label,
               datasets: [{

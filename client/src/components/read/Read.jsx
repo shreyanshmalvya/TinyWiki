@@ -11,8 +11,7 @@ const Read = () => {
 
     //fetching title from the store and assigning it to the state
     const title = useSelector(state => state.title.title);
-    console.log(title);
-
+    
     // using useEffect to fetch data from the api
     useEffect(() => {
         //fetching results from the api
