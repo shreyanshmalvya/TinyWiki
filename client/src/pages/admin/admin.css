@@ -1,37 +1,21 @@
 .notauthorizedWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 50vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   padding: 20px 20px;
   font-size: 1.4rem;
   font-weight: bold;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-
 .notauthorizedWrapper .notAuthorized {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
 }
-
 .notauthorizedWrapper .deniedimage {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .notauthorizedWrapper .deniedimage img {
   width: 25rem;
-}
-/*# sourceMappingURL=admin.css.map */
+}/*# sourceMappingURL=admin.css.map */

@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EAChB,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,OAAO,EAAE,IAAI;EACb,OAAO,EAAG,IAAI;EACd,eAAe,EAAE,MAAM;EACvB,cAAc,EAAE,MAAM;CAQvB;;AAdD,AAOE,iBAPe,CAOf,iBAAiB,CAAA;EACf,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,KAAK;EAClB,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;CACpB",
-    "sources": [
-        "loginPage.scss"
-    ],
-    "names": [],
-    "file": "loginPage.css"
-}
+{"version":3,"sources":["loginPage.scss","loginPage.css"],"names":[],"mappings":"AAAA;EACE,WAAA;EACA,YAAA;EACA,aAAA;EACA,aAAA;EACA,uBAAA;EACA,sBAAA;ACCF;ADAE;EACE,aAAA;EACA,kBAAA;EACA,mBAAA;EACA,uBAAA;EACA,mBAAA;ACEJ","file":"loginPage.css"}
