@@ -11,7 +11,7 @@ const Login = () => {
 
     const authCheck = async () => {
         // console.log(email, password);
-        const check = await axios.post('http://localhost:5000/user/login', {
+        const check = await axios.post('https://tinywiki-v1.herokuapp.com/user/login', {
             email, password
         })
         const { data } = check;

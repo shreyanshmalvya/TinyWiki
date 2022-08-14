@@ -16,7 +16,7 @@ const LineGraph = () => {
   const token = localStorage.getItem('token')
   //functions to assign data
   const searchDataFetch = async () => {
-    const response = await axios.get('http://localhost:5000/data/search', {
+    const response = await axios.get('https://tinywiki-v1.herokuapp.com/data/search', {
       headers: {
         Authorization: `Bearer ${token}`
       },
@@ -28,7 +28,7 @@ const LineGraph = () => {
   }
 
   const readDataFetch = async () => {
-    const response = await axios.get('http://localhost:5000/data/read', {
+    const response = await axios.get('https://tinywiki-v1.herokuapp.com/data/read', {
       headers: {
         Authorization: `Bearer ${token}`
       },

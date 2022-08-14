@@ -17,7 +17,7 @@ const Read = () => {
         //fetching results from the api
         if (title) {
             const result = async () => {
-                const response = await axios.get(`http://localhost:5000/read/${title}`);
+                const response = await axios.get(`hhttps://tinywiki-v1.herokuapp.com/read/${title}`);
                 const data = await response.data.html;
                 setResponse(data);
             }
