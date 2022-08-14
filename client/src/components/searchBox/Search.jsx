@@ -29,7 +29,7 @@ const Search = () => {
         //fetching results from the api
         if (search) {
             const result = async () => {
-                const response = await axios.get(`hhttps://tinywiki-v1.herokuapp.com/search/${search}`);
+                const response = await axios.get(`https://tinywiki-v1.herokuapp.com/search/${search}`);
                 const result = await response.data.pages;
                 setSearchResults(result);
             }
